@@ -1,0 +1,23 @@
+.table {
+  text-align: center;
+  width: 100%;
+  border: 1px solid #75e6da;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  /* margin-top: 5%; */
+  padding: 5%;
+  border: 8px solid black;
+  text-align: center;
+}
+.table th,
+.table td {
+  font-size: 20px;
+  border: 1px solid #75e6da;
+}
+.showHide {
+  margin-top: 2%;
+  font-size: 14px;
+}
