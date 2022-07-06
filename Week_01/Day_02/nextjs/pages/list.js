@@ -5,6 +5,7 @@ import ListComponent from "../components/ListComponent";
 
 const ListView = ({ listData }) => {
   const [data, setData] = useState(listData);
+  const [show, setShow] = useState(false);
 
   const handleRemove = (list) => {
     setData(data.filter((a) => list !== a.id));
@@ -13,7 +14,20 @@ const ListView = ({ listData }) => {
   return (
     <div className={styles.container}>
       <table className={styles.table}>
-        <ListComponent data={data} handleRemove={handleRemove} />
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>#</th>
+            <th>Title</th>
+            <th>Remove</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((list) => (
+            <ListComponent list={list} handleRemove={handleRemove} />
+          ))}
+        </tbody>
       </table>
     </div>
   );

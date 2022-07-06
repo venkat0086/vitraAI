@@ -1,6 +1,7 @@
 import Axios from "axios";
 import { useState } from "react";
 import GridComponent from "../components/GridComponent";
+import styles from ".././styles/Grid.module.css";
 
 const GridView = ({ listData }) => {
   const [data, setData] = useState(listData);
@@ -11,7 +12,11 @@ const GridView = ({ listData }) => {
 
   return (
     <>
-      <GridComponent data={data} handleRemove={handleRemove} />
+      <div className={styles.main}>
+        {data.map((list) => (
+          <GridComponent list={list} handleRemove={handleRemove} />
+        ))}
+      </div>
     </>
   );
 };
