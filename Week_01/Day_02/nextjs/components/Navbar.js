@@ -5,8 +5,8 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <div className={styles.links}>
         <Link href="/">Home</Link>
-        <Link href="/list">List View</Link>
-        <Link href="/grid">Grid View</Link>
+        <Link href="/view">List View</Link>
+        <Link href="/view">Grid View</Link>
       </div>
     </div>
   );

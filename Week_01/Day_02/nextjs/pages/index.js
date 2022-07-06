@@ -12,10 +12,10 @@ export default function Home() {
         <h1>Title</h1>
         <div className={styles.views}>
           <div>
-            <Link href="/list">List View</Link>
+            <Link href="/view">List View</Link>
           </div>
           <div>
-            <Link href="/grid">Grid View</Link>
+            <Link href="/view">Grid View</Link>
           </div>
         </div>
       </div>

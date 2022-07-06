@@ -7,7 +7,6 @@ const GridComponent = ({ handleRemove, list }) => {
   return (
     <>
       <div
-        key={list.id}
         onClick={() => {
           setShow(!show);
         }}

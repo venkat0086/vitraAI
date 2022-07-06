@@ -1,4 +1,3 @@
-import Axios from "axios";
 import styles from ".././styles/List.module.css";
 import { useState } from "react";
 import ListComponent from "../components/ListComponent";
@@ -25,7 +24,11 @@ const ListView = ({ listData }) => {
         </thead>
         <tbody>
           {data.map((list) => (
-            <ListComponent list={list} handleRemove={handleRemove} />
+            <ListComponent
+              key={list.id}
+              list={list}
+              handleRemove={handleRemove}
+            />
           ))}
         </tbody>
       </table>
@@ -33,14 +36,14 @@ const ListView = ({ listData }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  const data = await Axios.get("https://jsonplaceholder.typicode.com/posts");
+// export const getServerSideProps = async () => {
+//   const data = await Axios.get("https://jsonplaceholder.typicode.com/posts");
 
-  return {
-    props: {
-      listData: data.data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       listData: data.data,
+//     },
+//   };
+// };
 
 export default ListView;

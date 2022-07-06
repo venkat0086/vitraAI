@@ -122,3 +122,18 @@
     flex-direction: column;
   }
 }
+
+.viewButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  margin: 1% 0 2% 2%;
+}
+
+.viewButton:hover {
+  cursor: pointer;
+  color: black;
+  background-color: wheat;
+}

@@ -1,4 +1,3 @@
-import Axios from "axios";
 import { useState } from "react";
 import GridComponent from "../components/GridComponent";
 import styles from ".././styles/Grid.module.css";
@@ -14,21 +13,25 @@ const GridView = ({ listData }) => {
     <>
       <div className={styles.main}>
         {data.map((list) => (
-          <GridComponent list={list} handleRemove={handleRemove} />
+          <GridComponent
+            key={list.id}
+            list={list}
+            handleRemove={handleRemove}
+          />
         ))}
       </div>
     </>
   );
 };
 
-export const getStaticProps = async () => {
-  const data = await Axios.get("https://jsonplaceholder.typicode.com/posts");
+// export const getServerSideProps = async () => {
+//   const data = await Axios.get("https://jsonplaceholder.typicode.com/posts");
 
-  return {
-    props: {
-      listData: data.data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       listData: data.data,
+//     },
+//   };
+// };
 
 export default GridView;
