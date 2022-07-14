@@ -31,6 +31,7 @@ const ListComponent = ({ list, handleRemove }: props) => {
             src={`https://picsum.photos/50/50?random=${list.id}`}
             height={50}
             width={50}
+            alt="Image"
           />
         </td>
         <td>{list.id}</td>

@@ -158,7 +158,7 @@ const CoinData = ({ coinData }: data) => {
               </svg>
             </span>
             <input
-              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm w-96 mb-8"
+              className="placeholder:italic placeholder:text-slate-400 block bg-white w-96 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm mb-8"
               placeholder="Search for coins..."
               type="text"
               name="search"
@@ -258,7 +258,7 @@ const CoinData = ({ coinData }: data) => {
               <td className={`${tableDataStyles}`}>
                 <div className="flex space-x-2">
                   <span>
-                    <Image src={coin.icon} width={30} height={30} />
+                    <Image alt="hello" src={coin.icon} width={30} height={30} />
                   </span>
                   <span>{coin.name}</span>
                   <span>{coin.symbol}</span>
